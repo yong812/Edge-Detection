@@ -3,7 +3,7 @@ from multiprocessing.spawn import import_main_path
 from os import path
 from PIL import Image
 import numpy as np
-# import cv2
+import cv2
 
 
 #img.convert('L') 灰度图像，每个像素用8个bit表示，0表示黑色，255表示白色，其他颜色表示不同的灰度；
