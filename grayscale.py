@@ -34,6 +34,7 @@ import cv2
 
 
 
+
 if __name__=="__main__":
     path = "./gs/1.jpg"
     img = Image.open(path, "r")
