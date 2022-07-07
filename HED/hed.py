@@ -28,8 +28,8 @@ torch.backends.cudnn.enabled = True # make sure to use cudnn for computational p
 arguments_strModel = 'bsds500' # only 'bsds500' for now
 # arguments_strIn = './images/sample.png'
 # arguments_strOut = './out.png'
-arguments_strIn = './1.jpg'
-arguments_strOut = './1_out.jpg'
+arguments_strIn = 'images/1.jpg'
+arguments_strOut = 'images/1_out.jpg'
 
 for strOption, strArgument in getopt.getopt(sys.argv[1:], '', [ strParameter[2:] + '=' for strParameter in sys.argv[1::2] ])[0]:
     if strOption == '--model' and strArgument != '': arguments_strModel = strArgument # which model to use
@@ -143,8 +143,8 @@ def estimate(tenInput):
     intWidth = tenInput.shape[2]
     intHeight = tenInput.shape[1]
 
-    assert(intWidth == 512)
-    assert(intHeight == 512)
+    # assert(intWidth == 512)
+    # assert(intHeight == 512)
 
     return netNetwork(tenInput.cuda().view(1, 3, intHeight, intWidth))[0, :, :, :].cpu()
 # end
@@ -158,5 +158,5 @@ if __name__ == '__main__':
 
     PIL.Image.fromarray((tenOutput.clip(0.0, 1.0).numpy().transpose(1, 2, 0)[:, :, 0] * 255.0).astype(numpy.uint8)).save(arguments_strOut)
 
-    print("Detection Successfully.")
+    print("Edge Detection Successfully.")
 # end
