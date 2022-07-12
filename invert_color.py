@@ -1,5 +1,6 @@
 #颜色反转
-
+#直接使用 ImageChops 中定义的反转函数进行图像颜色反转
+#pip install pillow（需求库）
 
 from PIL import Image, ImageChops
 
