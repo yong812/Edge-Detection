@@ -4,10 +4,10 @@
 from PIL import Image, ImageChops
 
 def invert_color(fname):
-    im = Image.open(fname)
-    im_inverted = ImageChops.invert(im)
-    im_inverted.save(fname.replace('.', '_inverted.'))
-    return im_inverted
+    img = Image.open(fname)
+    img_inverted = ImageChops.invert(img)
+    img_inverted.save(fname.replace('.', '_inverted.'))
+    return img_inverted
     
 if __name__ == '__main__':
-    invert_color('test.jpg')
+    invert_color('1.jpg')
