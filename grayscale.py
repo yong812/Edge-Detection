@@ -6,6 +6,7 @@ import numpy as np
 import cv2
 
 
+
 #img.convert('L') 灰度图像，每个像素用8个bit表示，0表示黑色，255表示白色，其他颜色表示不同的灰度；
 # 转换公式：L=R*299/1000+G*587/1000+B*114/1000
 # # 通过PIL.Image类的resize方法对图片进行缩放
